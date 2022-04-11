@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr" id="top3">
+   <head>
+      <meta charset="utf-8">
+      <title>Feedback</title>
+      <!-- <link rel="stylesheet" href="feedback.css"> -->
+      <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <style>
+         *{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* NAVIGATION BAR CONFIGURATIONS */
+
+li,a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #ff0808;
+    text-decoration:none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: whitesmoke;
+    position: fixed;
+    width: 100%;
+    flex-wrap: wrap;
+    box-shadow: 1px 1px 15px #d8d6d6;
+    z-index: 10;
+}
+
+.head {
+    font-family: 'Montserrat', sans-serif;
+    color: #ff0808;
+    text-decoration:none;
+    background-color: whitesmoke;
+}
+
+
+.nav_links {
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a{
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover{
+    color: #0088a9;
+}
+
+ /* STYLES USED IN FEEDBACK  */
+
+body{
+  
+  min-height: 100vh;
+  padding: 0;
+  
+}
+
+.container .text{
+  text-align: center;
+  font-size: 30px;
+  font-weight: 655;
+  color: #060606ab;
+  
+}
+.container form{
+  padding: 30px 0 0 0;
+}
+.container form .form-row{
+  display: flex;
+  margin: 25px 0;
+}
+form .form-row .input-data{
+  width: 100%;
+  height: 40px;
+  margin: 0 20px;
+  position: relative;
+}
+form .form-row .textarea{
+  height: 70px;
+}
+.input-data input,
+.textarea textarea{
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 17px;
+  border-bottom: 2px solid rgba(0,0,0, 0.12);
+}
+.input-data input:focus ~ label, .textarea textarea:focus ~ label,
+.input-data input:valid ~ label, .textarea textarea:valid ~ label{
+  transform: translateY(-20px);
+  font-size: 14px;
+  color: #3498db;
+}
+.textarea textarea{
+  resize: none;
+  padding-top: 10px;
+}
+.input-data label{
+  position: absolute;
+  pointer-events: none;
+  bottom: 10px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+.textarea label{
+  width: 100%;
+  bottom: 40px;
+  background: #fff;
+}
+.input-data .underline{
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+}
+
+.submit-btn .input-data{
+  overflow: hidden;
+  height: 45px!important;
+  width: 25%!important;
+}
+.submit-btn .input-data .inner{
+  height: 100%;
+  width: 300%;
+  position: absolute;
+  left: -100%;
+  background: red;
+  transition: all 0.4s;
+}
+
+.submit-btn .input-data input{
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+
+form{
+	display: grid;
+}
+form *{
+	margin-top: 10px;
+	padding: 5px;
+	font-size: 18px;
+}
+
+.g_button{
+    margin: 0 22px;
+}
+input[type="radio"] {
+    margin: 0 10px 0 25px;
+    
+}
+
+.right {
+    box-shadow: 0 0 70px -40px inset #ffdfdf;
+    min-height: 100vh;
+}
+.left, .right {
+    float: left;
+    width: calc(50% - 1px);
+    padding: 2% 5%;
+    overflow: auto;
+}
+
+.total {
+    padding-top: 70px;
+}
+
+footer {
+    width: 100%;
+    display: block;
+    float: left;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 30px;
+    background-color: rgb(216, 211, 211);
+    padding: 10px;
+    
+    color: black;
+ 
+
+}
+
+
+.card .person {
+   
+    padding: 10px 20px;
+    font-size: 20px;
+    overflow: clip;
+    
+   
+    text-transform: capitalize;
+    word-spacing: 2px;
+}
+
+.card {
+    width: 80%;
+    background: white;
+    box-shadow: 3px 0px 28px -8px rgb(146, 141, 141);
+    margin: auto;
+        margin-bottom: auto;
+    margin-bottom: 40px;
+    transition: opacity 1s;
+    will-change: opacity;
+    position: relative;
+    top: 0;
+    border-radius: 25px;
+
+}
+
+.card .content {
+    padding: 10px 66px 17px;
+    word-wrap: break-word;
+    font-size: 20px;
+}
+
+.heading {
+    font-size: 30px; 
+    font-weight: 655;
+    color: #060606ab;
+    text-align: center; 
+    margin-bottom: 30px;
+}
+      </style>
+
+<script>
+  function checkvalues(){
+	
+	
+  if(document.getElementById('mal').checked) {   
+         var gen=document.getElementById('mal');
+          
+  }   
+  else{
+      var gen=document.getElementById('fmal');
+  }
+
+  
+var fname = document.getElementById('first');
+var lname = document.getElementById('last');
+ 
+
+  if ((fname.value.length>30) || (lname.value.length>30)){
+      alert('First or Last Name contains more than 30 characters , Please make corrections.');
+  return;
+  }
+
+        
+
+if(hasNumber(fname.value) || hasNumber(lname.value)){
+  alert('First or Last Name is invalid, Please make corrections.');
+  return;
+}
+var comment= document.getElementById('comment');
+if(!gen.checked||!fname.value.length ||!comment.value.length){
+  alert('some value is empty, please fill it.');
+  alert('some value is empty, please fill it.');
+  alert('some value is empty, please fill it.');
+  return;
+}
+makeCard(gen, fname, lname, comment);
+}
+function makeCard(gen, fname, lname, comment) {
+var n = document.createElement('div');
+n.className = 'card';
+var newperson = document.createElement('div');
+var newcontent = document.createElement('div');
+newperson.className = 'person';
+newperson.innerHTML = gen.value + ' ' + fname.value + ' ' + lname.value+ ' says...';
+newcontent.className = 'content';
+newcontent.innerHTML = comment.value;
+n.appendChild(newperson);
+n.appendChild(newcontent);
+document.querySelector('.heading').after(n);
+n.classList.add('fade');
+if(document.getElementsByClassName('card').length == 6){
+  document.getElementsByClassName('card')[5].remove();
+}
+setTimeout(()=>n.classList.remove('fade'), 500);
+}
+function hasNumber(String) {
+return /\d/.test(String);
+}
+
+
+
+document.getElementById('myForm').reset()
+
+
+function reset(){
+  document.getElementById('myForm').reset()
+}
+</script>
+
+
+
+
+   </head>
+
+
+
+
+   <body>
+    <header>
+        <h1 id="head" class="head">Feedback</h1>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="#top3">HOME</a></li>
+                <li><a href="AboutMe_212120012.html">ABOUT ME</a></li>
+                <li><a href="Books_212120012.html">BOOKS</a></li>
+                <li><a href="#footer">CONTACTS</a></li>
+                
+            </ul>
+        </nav>
+    </header> 
+       <div class="total">
+    <div class="container left">
+        <div class="text">Please fill the feedback form</div>
+        <form action="#" id="myForm" onsubmit="return false" >
+           <div class="form-row">
+              <div class="input-data">
+                 <input id="first" type="text" required>
+                 <label for="">First Name</label>
+              </div>
+            </div>
+              <div class="form-row">
+              <div class="input-data">
+                 <input id="last" type="text" required>
+                 <label for="">Last Name</label>
+              </div>
+           </div>
+           <div class="form-row">
+            <div class="g_button">
+             Gender : 
+                  <input id="mal" type="radio" name="gender" value="Mr. ">Male
+                  <input id="fmal" type="radio" name="gender" value="Mrs. ">Female
+               </div>
+            </div>
+          
+           <div class="form-row">
+              <div class="input-data textarea">
+                 <textarea id="comment" rows="8" cols="80" required></textarea>
+                 <br />
+              
+                 <label for="">Comments</label>
+                 <br />
+                 </div>
+                 </div>
+               
+                 <div class="form-row submit-btn">
+                    <div class="input-data">
+                       <div class="inner"></div>
+                       <input id="btn1" type="submit" value="submit" onclick="checkvalues()">
+                    </div>
+                    <div class="input-data">
+                        <div class="inner"></div>
+                        <input id="btn2" type="button" value="reset" onclick="reset()">
+                     </div>
+                 </div>        
+        </form>
+     </div>
+     <div class="right">
+        <div class="heading">
+            Top Comments
+        </div>
+        <div class="card">
+            
+        </div>
+    </div>
+</div>
+<footer id="footer">
+    <h3>CONTACT Info</h3>
+     <p>Email:<a href="mailto:mail@akashping.com">xyz@gmail.com</a></p> 
+      <p>Phone no: 1234567890</p>
+     <p>Address: xyz-xyz-xyz</p>
+     <p>Copyright  © Akash Ping, MANIT BHOPAL 2021</p>
+
+</footer>
+<!-- <script defer src="feedback.js" type='text/javascript'></script> -->
+   </body>
+
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" id="top2">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter&family=Merriweather+Sans:wght@300;700&family=Merriweather:wght@900&family=Montserrat:wght@500&family=Roboto+Slab:wght@300&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap">
+    <title>My Books</title>
+    <!-- <link rel="stylesheet" href="Books.css"> -->
+
+    <style>
+        * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* NAVIGATION BAR CONFIGURATIONS */
+
+li,a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #ff0808;
+    text-decoration:none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: whitesmoke;
+    position: fixed;
+    width: 100%;
+    flex-wrap: wrap;
+    box-shadow: 1px 1px 15px #d8d6d6;
+}
+
+.head {
+    font-family: 'Montserrat', sans-serif;
+    color: #ff0808;
+    text-decoration:none;
+    background-color: whitesmoke;
+}
+
+
+.nav_links {
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a{
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover{
+    color: #0088a9;
+}
+
+
+/*  STYLES USED IN Books */
+
+.content {
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+      padding-top:85px;
+}
+ 
+ 
+ .book{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid white;
+    
+    border-radius: 4px;
+    background-color: white;
+    max-width: 100%;
+    max-height: 100%
+ }
+ .img {
+     max-height:100%; 
+     max-width:100%;
+     text-align: center;
+     padding: 25px;
+    
+     object-fit: cover;
+     
+     
+     
+ }
+ img {
+     object-fit: cover;
+     width: 366px;
+   height : auto;
+   box-shadow: 9px 9px 5px #d8d6d6;
+ }
+ 
+ 
+     .about {
+      
+      overflow-y: auto;
+        max-height:100%; 
+     max-width:100%;
+     text-align: center;
+     padding: 25px;
+     
+     object-fit: cover;
+    
+     }
+
+     .p2{
+        font-family: 'Bitter', serif;
+        padding: 16px 4%;
+        font-size: 25px;
+ 
+     }
+
+     .book_name {
+    background-color: whitesmoke;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-weight: bolder;
+    font-size: 30px;
+    padding: 20px 10%;
+    color: slategray;
+
+     }
+
+     .contain {
+        padding-top: 20px;
+        font-family: 'Merriweather Sans', sans-serif;
+        font-size: 25px;
+        color: slategray;
+     }
+
+
+     footer{
+      width: 100%;
+      display: block;
+      float: left;
+      text-align: center;
+      font-size: 18px;
+      margin-top: 30px;
+      background-color: rgb(216, 211, 211);
+      padding: 10px;
+      color: black;
+      font-family: 'Poppins', sans-serif;
+      
+        
+     }
+       
+    
+      
+    </style>
+
+</head>
+<body>
+  <header>
+      <h1 class="head">My Books</h1>
+      <nav>
+          <ul class="nav_links">
+            <li><a href="#top2">HOME</a></li>
+              <li><a href="AboutMe_212120012.html">ABOUT ME</a></li>
+              <li><a href="feedback_212120012.html">FEEDBACK</a></li>
+              <li><a href="#footer">CONTACTS</a></li>
+          </ul>
+      </nav>
+  </header> 
+  <main id="main_2">
+     <div class="content">
+         <div class="book">
+            <div class="img"><a href="https://www.flipkart.com/let-us-c/product-reviews/itmfbuhanayef64r?pid=9788183331630" target="_blank"><img src="https://images-na.ssl-images-amazon.com/images/I/51NuHATrs8L._SX354_BO1,204,203,200_.jpg"  ></a></div>
+            <div class="about">
+                <h2 class="book_name">Let Us C</h2>
+                <p class="p2">This is an awesome book if you want to start learning programming. Each and every topic and concept is explained in a easy manner. The author of this book is Yashavant Kanetkar who is a computer science author of Indian origin. </p>
+                <h3 class="contain">What does it contain ?</h3>
+                <p class="p2"> It contains basics of C language, comprehencive introduction to fundamental concepts and explains them in a easy way that a beginner can understand easily. </p>
+                <h3 class="contain">My thoughts about it.</h3>
+                <p class="p2">Let Us C was my first CS book that I read when I started coding, it helped me to understand basic concepts and funamental of a C Program. The Author taught through examples which made it more easy to understand</p>
+            </div>
+         </div>
+         <div class="book">
+            <div class="img"><a href="https://www.amazon.in/Operating-System-Principles-Silberschatz/product-reviews/8126509627" target="_blank"><img src="https://images-na.ssl-images-amazon.com/images/I/413Nwx4UyML._SX318_BO1,204,203,200_.jpg"  ></a></div>
+            <div class="about">
+                <h2 class="book_name">Operating System Princliples</h2>
+                <p class="p2">Operating System Principles by Wiley is an excellent book for the concept of Operating System. It is divided into eight parts, each part explains different topics like first part Operating System ,second part process management, etc. </p>
+                <h3 class="contain">What does it contain ?</h3>
+                <p class="p2">It contains important topics from the rapidly changing fields of operating systems and concepts like process-concept, multi-threaded programming, process scheduling ,etc. </p>
+                <h3 class="contain">My thoughts about it.</h3>
+                <p class="p2">It is a very comprehensive guide to the workings of the computer / operating system with lots of excellent diagrams and good explanations of quite complex topics.</p>
+            </div>
+         </div>
+         <div class="book">
+            <div class="img"><a href="https://www.goodreads.com/book/show/108986.Introduction_to_Algorithms" target="_blank"><img src="https://images-eu.ssl-images-amazon.com/images/I/513P8XoCAEL._SX198_BO1,204,203,200_QL40_FMwebp_.jpg"  ></a></div>
+            <div class="about">
+                <h2 class="book_name">Introduction to Algorithms</h2>
+                <p class="p2">Introduction to Algorithms is one of the best book for Data Structure and Algorithms.The author of this book is Thomas H. Cormen who is the Professor and former Chair of the Dartmouth College Department of Computer Science .</p>
+                <h3 class="contain">What does it contain ?</h3>
+                <p class="p2">It contains  comprehensive introduction to fundamental concept an a full spectrum of modern algorithms explained in a easy way.  </p>
+                <h3 class="contain">My thoughts about it.</h3>
+                <p class="p2">This book is impressive! It covers a lot of subject matter and is clearly worded. You'll be pushed into analyzing algorithms for theoretical data structures that you will learn concrete approaches to determining approaches.</p>
+            </div>
+         </div>
+     </div>
+  </main> 
+  <footer id="footer">
+      <h3>CONTACT Info</h3>
+       <p>Email:<a href="mailto:mail@akashping.com">xyz@gmail.com</a></p> 
+        <p>Phone no: 1234567890</p>
+       <p>Address: xyz-xyz-xyz</p>
+       <p>Copyright  © Akash Ping, MANIT BHOPAL 2021</p>
+
+  </footer>
+</body>
+</html>
